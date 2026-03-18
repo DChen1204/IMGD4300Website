@@ -1,5 +1,3 @@
-This is Diwen Chen's portfolio. 
-It contains some of the work done as a programmer and game developer.
-
-
-If you are reading this README, run the index.html page for the website. 
+This is Diwen Chen's IMGD 4300 Graphics, Simulation, and Aesthetic Website.
+It is a assignment demonstraction website that shows the assignments that I worked on. 
+Check out the website: https://dchen1204.github.io/IMGD4300Website/
