@@ -12,7 +12,7 @@
 
 <!--Left Banner-->
 <div class="left-banner">
-    <h1> Assignment </h1>
+    <h1>IMGD 4300</h1>
     <hr />
     <div class="spacer"> </div>
 
@@ -24,7 +24,7 @@
 
     <!--First Assignment-->
     <p class="clickable-text"> 
-        <a href="firstAssignment.html"> First Assignment</a>
+        <a href="firstAssignment.html"> Shader Live Coding </a>
     </p>
     <div class="spacer"> </div> 
 
@@ -32,9 +32,56 @@
 
 <!--Content to the right of the left banner-->
 <div class="right-content">
-    <h1> [First Assignment] </h1>
+    <h1> Shader Live Coding </h1>
     <hr/>
     <br>
+    <p3> 
+        <span style="font-weight: bold;"> Objective </span>: Create a one-minute or longer animation using The Schwartz environment. 
+        <br> <br>
+        <span style="font-weight: bold;"> Animation Video: </span>
+        <br> <br>
+        <iframe width="1000" height="563" 
+            src="https://www.youtube.com/embed/grpTT0OcMc0?si=NhqGxW9Xm2IaxEB7" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+        <p class="clickable-text"> 
+            <a href="https://youtu.be/grpTT0OcMc0"> Link if video does not show </a>
+        </p>
+        
+        <br> <hr/>
+        <span style="font-weight: bold;"> Explaination: </span>
+        <br> <br> 
+        <div class = "text-box">
+            <span style="font-weight: bold;">Tech - </span> I mainly used the time function to change the positions of the lines in various ways. 
+            To draw the shapes, I created the drawShape function that takes in the pixel position, the rectangle position, and rectangle size. 
+            In drawShape, I defined the four boundaries of the rectangle and use step() to check if the pixel is within the rectangle.
+            In the end, the pixel will be colored if it is within any shapes. The colored rectangles use mix() to color themselves. 
+            To create the animation, I had many equations to get the desired movements across multiple phases.  
+        
+            <br> <br>
+
+            <span style="font-weight: bold;"> Aesthetic - </span> I was inspired by the painting Piet Mondrian - Tableau shown in The Book of Shaders. 
+            I recreated the painting in shader and I was motivated to make it come alive through movement. 
+            The animation starts off slow with the lines starts moving in the same direction one by one. 
+            Then it hits the first climax when the horizontal lines and vertical lines are moving at the same time and changing direction. 
+            The animation slows down when the horizontal lines starts bouncing around, but then quickly picks up when the vertical lines bounce too. 
+            In the end, the rotation breaks the translation theme and the random spin creates the ultimate chaos. 
+            The transition of the painting from orderly to chaotic fascinates me.  
+        </div>
+
+        <br> <hr/>
+        <span style="font-weight: bold;"> Feedback: </span>
+        <br> <br> 
+        <div class = "text-box">
+            
+        </div>
+
+    </p3>
+
+
     <!--
     <p2> Cull The Weak </p2> <br>
     <p3> Infinite Horizontal-Scrolling Arcade Shooter </p3>

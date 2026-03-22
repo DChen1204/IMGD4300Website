@@ -4,6 +4,10 @@ body {
     overflow-x: hidden;
 }
 
+.text-box {
+    width: 1000px; 
+}
+
 .top-banner {
     background-color: rgb(187, 10, 10);
     text-align: left;
@@ -74,7 +78,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px;
+    width: 210px;
     height: 100%;
     padding: 20px;
     text-align: center;
