@@ -43,8 +43,10 @@
     <br>
     <p3> 
         <span style="font-weight: bold;"> Objective: </span>
-        Create a fullscreen fragment shader incorporating live video, 
-        noise, and different interaction mechanisms.
+        <div class = "text-box">
+            Create a fullscreen fragment shader incorporating live video, 
+            noise, and different interaction mechanisms.
+        </div>
         <br> <br>
         
         <span style="font-weight: bold;"> Project Images: </span>
@@ -76,33 +78,44 @@
         <span style="font-weight: bold;"> Explaination: </span>
         <br> <br> 
         <div class = "text-box">
-            <span style="font-weight: bold;">Tech - </span>  
+            <span style="font-weight: bold;">Tech - </span> 
+            I used various noise functions from the textbook to simulate the four elements. 
+            Water uses 2D simple noise to create the current and light effects. 
+            The bubbles are generated using procedural tiling with 2D random function. 
+            Fire uses fractual brownian motion to get the wobbly effect. 
+            Earth uses cellcular noise for its tiles and mouse distortion. 
+            Vector math is the main component of the electro element, but it also uses noise for the jagged shape. 
+            The rest of the shader code is just a lot of color mixing and smoothsteping to get the right look. 
+            For interactive mechanisms, I implemented toggle, slider, button, mouse position, and mouse click in html. 
+            They each add interesting variation to the elements. 
+            I incorporated live video by allowing custom live video background on top of the elements.   
         
             <br> <br>
 
-            <span style="font-weight: bold;"> Aesthetic - </span> I was inspired by the painting Piet Mondrian - Tableau shown in The Book of Shaders. 
-            I recreated the painting in shader and I was motivated to make it come alive through movement. 
-            The animation starts off slow with the lines starts moving in the same direction one by one. 
-            Then it hits the first climax when the horizontal lines and vertical lines are moving at the same time and changing direction. 
-            The animation slows down when the horizontal lines starts bouncing around, but then quickly picks up when the vertical lines bounce too. 
-            In the end, the rotation breaks the translation theme and the random spin creates the ultimate chaos. 
-            The transition of the painting from orderly to chaotic fascinates me.  
+            <span style="font-weight: bold;"> Aesthetic - </span> 
+            While reading through the noise chapters, I was awed by the chaotic yet patterned effect produced by noise functions. 
+            I think these features fit nicely with the elements like water and fire. 
+            I explored different noise functions on the element I think that best simulates it. 
+            I was also exploring various interactive mechanisms to make the elements more interesting. 
+            Each element has a toggle on/off to allow users to freely combine the elements. 
+            Making live video a background further extends that freedom.    
         </div>
 
         <br> <hr/>
         <span style="font-weight: bold;"> Feedback: </span>
         <br> <br> 
         <div class = "text-box">
-            "We have very similar styles to our animations, as we both took inspiration from Piet Mondrian. 
-            I enjoyed how you explored different transformations around both axis in your animation. 
-            I found the rotation of the grid lines towards the end to be especially cool to watch." 
-            - Cole Bennett
+            "this is very cool! i like how varied your effects are, and the contrast 
+            with fire/electro when having the 'earth' toggled on is jarring (not a bad thing). 
+            i think it would have been neat to have the water distort the camera feed, 
+            though im not sure how difficult that would be since I havent gotten to implementing that yet. 
+            overall good stuff"
+            - jay
             <br> <br>
-            I watched his animation and indeed we both used Piet Mondrian as inspiration. 
-            However, I think our styles are quite different. 
-            His is a cycle, while mine goes through multiple phases and does not return to the original state.
-            He also use more different elements compared to my line-focused theme. 
-            Aside from that, I did expect people to find the end rotation to be coolest part. 
+            I anticipated people would like the variety of elements and the freedom to combine them.
+            I am also not surprised that people think the live video background could need more work, since
+            it was a pain for me to implment live video. I was unable to make it more interactive and interesting. 
+            But I am glad that people like the elements. 
 
         </div>
         
