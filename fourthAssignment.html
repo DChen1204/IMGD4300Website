@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Fourth Assignment </title>
+
+<!-- CSS styling -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!--Left Banner-->
+<div class="left-banner">
+    <h1>IMGD 4300</h1>
+    <hr />
+    <div class="spacer"> </div>
+
+    <!--Home-->
+    <p class="clickable-text"> 
+        <a href="index.html"> Home </a>
+    </p>
+    <div class="spacer"> </div> 
+
+    <!--First Assignment-->
+    <p class="clickable-text"> 
+        <a href="firstAssignment.html"> Shader Live Coding </a>
+    </p>
+    <div class="spacer"> </div> 
+
+    <!-- Second Assignment-->
+    <p class="clickable-text">
+        <a href="secondAssignment.html"> WebGPU Intro </a>
+    </p>
+    <div class="spacer"> </div>
+
+    <!-- Third Assignment-->
+    <p class="clickable-text">
+        <a href="thirdAssignment.html"> Reaction Diffusion </a>
+    </p>
+    <div class="spacer"> </div>
+
+    <!-- Fourth Assignment-->
+    <p class="clickable-text">
+        <a href="fourthAssignment.html"> Particles </a>
+    </p>
+    <div class="spacer"> </div>
+
+</div>
+
+<!--Content to the right of the left banner-->
+<div class="right-content">
+    <h1> Particles </h1>
+    <hr/>
+    <br>
+    <p3> 
+        <span style="font-weight: bold;"> Objective: </span>
+        <div class = "text-box">
+            Emulate / approximate a particle effect of your choice.
+            Consider lasers, smoke, explosions, fire, bubbles etc. 
+            Find an example of gameplay footage that you'd like to imitate.
+        </div>
+        <br> <br>
+
+        <span style="font-weight: bold;"> Inspiration Footage: </span>
+        <br> <br>
+        <iframe width="1000" height="563"  
+            src="https://www.youtube.com/embed/z3APa9eOq8w?si=3G8jNE3_yi_8UN8-" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+        <p class="clickable-text"> 
+            <a href="https://youtu.be/z3APa9eOq8w?si=Z-t9eNm3CpJdphEF"> Link if video does not show </a>
+        </p>
+        <br>
+        
+        <span style="font-weight: bold; clear: left;"> Project Image: </span>
+        <br> <br>
+        <img src="particleImages/particlePic1.png" alt="First Image" 
+        style="float: left; margin-right:50px; margin-bottom: 50px; width: 900px; height: 450px;">
+        <br> <br>
+
+        <div style="clear: left;">
+            <span style="font-weight: bold;"> Shader Website: </span>
+            <a href="https://dchen1204.github.io/IMGD4300Assignment5/"> https://dchen1204.github.io/IMGD4300Assignment5/ </a>
+            <br> <br>
+            <span style="font-weight: bold;"> Repo: </span>
+            <a href="https://github.com/DChen1204/IMGD4300Assignment5"> https://github.com/DChen1204/IMGD4300Assignment5 </a>
+            <br> <br>
+        </div>
+        <br> <hr/>
+
+        <span style="font-weight: bold;"> Explaination: </span>
+        <br> <br> 
+        <div class = "text-box">
+            The particle effect I have created is raining asteroids. 
+            The effect consists of hundreds of asteroid particles constantly raining down. 
+            The asteroids spawn in varying sizes and velocities. 
+            Asteroids have trails behind them as they drop. 
+            The website allows three controls – spawn rate, trail length, and gravity. 
+            Spawn rate controls how many asteroids is being created; 
+            trail length is obvious; 
+            gravity allows the asteroids to stop falling or fall crazy fast at the extremes. 
+            I used the position history trail to create the trail effect. 
+            The trails are 20 previous frames of the asteroid scaled down.  
+            This project is meant to be a practice for not using gulls, so it is relatively easy on the design part. 
+            However, the technical aspect is complicated and main.js is cluttered with setup codes. 
+            I think I can develop more complex graphics in the future as I gain more experience.  
+            <br> <br>
+ 
+            The raining asteroid is inspired by Phainon’s skill “Foundation: Stardeath Verdict” from Honkai Star Rail. 
+            The original effect shows amazing graphics, and I can feel it is a devastating attack. 
+            I tried to emulate it with my best effort. 
+            I tried to simulate the flames using my fire effect from my WebGPU Intro assignment, but it did not look well. 
+            The incredible fire effect around the asteroid of the original effect is out of my skill range, so I chose a simplistic design to keep the asteroids aesthetically pleasing. 
+            The asteroid has a black core, a flame layer, and a fade layer. 
+            The fade layer is made more transparent for the glowing effect. 
+            The animation appears to have near and far layers. 
+            The near layer has larger asteroids falling at higher speed, which provides a visionally stunning effect. 
+            The far layer has smaller and slow asteroids that acts as an interesting background for detailed observations.  
+        
+        </div>
+
+        <br> <hr/>
+        <span style="font-weight: bold;"> Feedback: </span>
+        <br> <br> 
+        <div class = "text-box">
+            
+            <br> <br>
+            
+
+        </div>
+        
+
+    </p3>
+
+
+<!--Javascript file-->
+<script src="canvas.js"></script>
+
+</body>
+
+</html>
