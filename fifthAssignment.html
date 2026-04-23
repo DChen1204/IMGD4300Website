@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Fifth Assignment </title>
+
+<!-- CSS styling -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!--Left Banner-->
+<div class="left-banner">
+    <h1>IMGD 4300</h1>
+    <hr />
+    <div class="spacer"> </div>
+
+    <!--Home-->
+    <p class="clickable-text"> 
+        <a href="index.html"> Home </a>
+    </p>
+    <div class="spacer"> </div> 
+
+    <!--First Assignment-->
+    <p class="clickable-text"> 
+        <a href="firstAssignment.html"> Shader Live Coding </a>
+    </p>
+    <div class="spacer"> </div> 
+
+    <!-- Second Assignment-->
+    <p class="clickable-text">
+        <a href="secondAssignment.html"> WebGPU Intro </a>
+    </p>
+    <div class="spacer"> </div>
+
+    <!-- Third Assignment-->
+    <p class="clickable-text">
+        <a href="thirdAssignment.html"> Reaction Diffusion </a>
+    </p>
+    <div class="spacer"> </div>
+
+    <!-- Fourth Assignment-->
+    <p class="clickable-text">
+        <a href="fourthAssignment.html"> Particles </a>
+    </p>
+    <div class="spacer"> </div>
+
+    <!-- Fifth Assignment-->
+    <p class="clickable-text">
+        <a href="fifthAssignment.html"> Vants </a>
+    </p>
+    <div class="spacer"> </div>
+
+</div>
+
+<!--Content to the right of the left banner-->
+<div class="right-content">
+    <h1> Langton's Ants (Vants) </h1>
+    <hr/>
+    <br>
+    <p3> 
+        <span style="font-weight: bold;"> Objective: </span>
+        <div class = "text-box">
+            Implement different behaviors for different ant types. 
+            Experiment and find interesting patterns that come out. 
+        </div>
+        <br> <br>
+        
+        <span style="font-weight: bold; clear: left;"> Project Image: </span>
+        <br> <br>
+        <img src="vantImages/vant1.png" alt="First Image" 
+        style="float: left; margin-right:50px; margin-bottom: 50px; width: 900px; height: 450px;">
+        <br> <br>
+
+        <div style="clear: left;">
+            <span style="font-weight: bold;"> Shader Website: </span>
+            <a href="https://dchen1204.github.io/IMGD4300Assignment6/"> https://dchen1204.github.io/IMGD4300Assignment6/ </a>
+            <br> <br>
+            <span style="font-weight: bold;"> Repo: </span>
+            <a href="https://github.com/DChen1204/IMGD4300Assignment6"> https://github.com/DChen1204/IMGD4300Assignment6 </a>
+            <br> <br>
+        </div>
+        <br> <hr/>
+
+        <span style="font-weight: bold;"> Explaination: </span>
+        <br> <br> 
+        <div class = "text-box">
+            I implemented four types of vants - RL, RS, SL, and RR. 
+            The first character corresponds to the ant action when moving onto an empty cell – Right, Left, or Straight. 
+            The second character is what the ant will do while on the pheromone cell. 
+            The pattern these vants create tends to be a dense core in the middle of screen, 
+            and thin arrays going out in the north, south, east, and west directions. 
+            I added the feature to switch the vant type during the simulation, 
+            and it’s interesting to see the new vant operating on the canvas already drawn by a different algorithm. 
+            For example, when the current vant switches from RL to RS, it’s almost if the simulation is going backward. 
+            The thin arrays in the four directions would retract, and the dense core slowly expands. 
+            On the other hand, if RR is switched to from other vants, the ants would get stuck inside the core and they appear to be glitching. 
+            Those two are the most unique transitions; there are also other interesting examples to explore. 
+            This assignment uses standard WebGPU setup instead of gulls for me to be more familiar with the language. 
+            Otherwise, the implementation code is very similar to the provided example, and I enjoy this mini project.  
+        
+        </div>
+        
+    </p3>
+
+
+<!--Javascript file-->
+<script src="canvas.js"></script>
+
+</body>
+
+</html>
