@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Final Project </title>
+
+<!-- CSS styling -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!--Left Banner-->
+<div class="left-banner">
+    <h1>IMGD 4300</h1>
+    <hr />
+    <div class="spacer"> </div>
+
+    <!--Home-->
+    <p class="clickable-text"> 
+        <a href="index.html"> Home </a>
+    </p>
+    <div class="spacer"> </div> 
+
+    <!--First Assignment-->
+    <p class="clickable-text"> 
+        <a href="firstAssignment.html"> Shader Live Coding </a>
+    </p>
+    <div class="spacer"> </div> 
+
+    <!-- Second Assignment-->
+    <p class="clickable-text">
+        <a href="secondAssignment.html"> WebGPU Intro </a>
+    </p>
+    <div class="spacer"> </div>
+
+    <!-- Third Assignment-->
+    <p class="clickable-text">
+        <a href="thirdAssignment.html"> Reaction Diffusion </a>
+    </p>
+    <div class="spacer"> </div>
+
+    <!-- Fourth Assignment-->
+    <p class="clickable-text">
+        <a href="fourthAssignment.html"> Particles </a>
+    </p>
+    <div class="spacer"> </div>
+
+    <!-- Fifth Assignment-->
+    <p class="clickable-text">
+        <a href="fifthAssignment.html"> Vants </a>
+    </p>
+    <div class="spacer"> </div>
+
+    <!-- Final Project-->
+    <p class="clickable-text">
+        <a href="sixthAssignment.html"> Final Project </a>
+    </p>
+    <div class="spacer"> </div>
+
+</div>
+
+<!--Content to the right of the left banner-->
+<div class="right-content">
+    <h1> 3D Boids </h1>
+    <hr/>
+    <br>
+    <p3> 
+        <span style="font-weight: bold;"> Description: </span>
+        <div class = "text-box">
+            A 3d Boids simulation without using helper libraries. 
+            User may drag the camera, repel/attract boids, and adjust the parameters. 
+            The theme is Order & Chaos. Thousands of boids may fly in unison patterns,
+            or scatter and descend into chaos. 
+        </div>
+        <br> <br>
+        
+        <span style="font-weight: bold; clear: left;"> Project Video: </span>
+        <br> <br>
+        <iframe width="1000" height="563" 
+            src="https://www.youtube.com/embed/P9PzDcFzgYg?si=MVyCcy9NDU9Fd3d6" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+        <p class="clickable-text"> 
+            <a href="https://www.youtube.com/watch?v=P9PzDcFzgYg"> Link if video does not show </a>
+        </p>
+
+        <div style="clear: left;">
+            <span style="font-weight: bold;"> Shader Website: </span>
+            <a href="https://dchen1204.github.io/IMGD4300FinalProject/"> https://dchen1204.github.io/IMGD4300FinalProject/ </a>
+            <br> <br>
+            <span style="font-weight: bold;"> Repo: </span>
+            <a href="https://github.com/DChen1204/IMGD4300FinalProject"> https://github.com/DChen1204/IMGD4300FinalProject </a>
+            <br> <br>
+        </div>
+        <br> <hr/>
+
+        <span style="font-weight: bold;"> Implementation: </span>
+        <br> <br> 
+        <div class = "text-box">
+            After learning about Boids simulation, I was fascinated by the patterns created by the boids’ movements. 
+            Therefore, I decided to implement it as my final project. 
+            To make the boids more interesting and visually striking, I implemented them in 3D. 
+            Adding a third dimension allows for maximum freedom of movement and lets the boids feel more realistic, like a group of birds or bees. 
+            Aside from being in 3D, I also wanted fun interactions with the boids. 
+            Therefore, I created an orbiting camera, parameter sliders, and repel/attract mouse. 
+            The camera can be dragged by the mouse to view the scene from multiple perspectives. 
+            Combined with the zoom function, the boids can be freely observed, whether seeing them up close or admiring the whole picture. 
+            The parameter sliders enable changing the separation, alignment, and cohesion weights of the simulation. 
+            Interesting patterns can emerge through unique combinations of those three values. 
+            Finally, the mouse may repel or attract nearby boids and the mode can be freely switched. 
+            This feature gives a direct tool to influence simulation.  
+            
+            <br> <br>
+ 
+            I chose to implement the project from ‘scratch’, which means I did not use seagulls or other helper libraries. 
+            It was useful to learn about raw WebGPU, but the setup process was much more arduous, and I basically had to write every function. 
+            The first milestone I set was to create the 2D version of Boids, which served as the framework for 3D Boids. 
+            The JavaScript setup is complicated, and it took me a while to have the whole process of 
+            WebGPU configuration -> load shaders -> constants -> data arrays -> buffers -> bind groups -> pipelines -> html elements -> render loop. 
+            Then the main challenge was the compute shader; it took me quite some time to complete the boids’ core logic. 
+            I also implemented the 2D mouse repel/attract interaction feature.  
+
+            <br> <br>
+
+            Milestone 2 was to make the boids 3D. 
+            The Z dimension was added to the simulation, and the velocities of the boids became 3D. 
+            The JavaScript hosts a camera using the properties of angle, distance, height, position, and target. 
+            These properties were utilized in the vertex shader, which was the main focus of milestone 2. 
+            In 2D, the vertex shader rendered a flat triangle as boids. It was scaled, rotated, translated, converted to clip space, and colored. 
+            For 3D, the shader rendered boids using four 3D vertices and connecting them into four triangles. 
+            There was an extra camera setup step that allowed a 3D view using a view matrix and a projection matrix. 
+            The compute shader was minimally modified to adopt the third dimension. 
+            After the main feature was implemented, milestone 3 was about decorating the simulation. 
+            A separate background shader was added. 
+            It draws the sky gradient, the ground grid, scene lighting, and distance fog. 
+            The JavaScript has two render passes, the original one for boids and the new one for the background. 
+            The fragment shader also had the lighting upgrade for the boids.  
+
+            <br> <br>
+
+            The final part was to implement the control functionalities. 
+            The parameters sliders were straightforward. 
+            The mouse interaction was made 3D by shooting a ray from the camera to the mouse on screen. 
+            A cylinder replaced the flat circle for detection. 
+            The process was difficult because of the complex math. 
+            The last feature was camera dragging. 
+            The camera angle, height, and distance were made to update based on mouse position and scroll wheel.  
+        
+        </div>
+        
+    </p3>
+
+
+<!--Javascript file-->
+<script src="canvas.js"></script>
+
+</body>
+
+</html>
